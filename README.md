@@ -1,6 +1,4 @@
-# training-doc
-
-## チュートリアル
+# チュートリアル
 
 - [01-01. Windows で開発をはじめる](docs/チュートリアル/01-01_Windowsで開発をはじめる/index.md)
 - [02-01. 入門 Visual Studio Code](docs/チュートリアル/02-01_入門VisualStudioCode/index.md)
