@@ -6,7 +6,7 @@
 
 Linux は Linux カーネルをベースとする OS（オペレーティングシステム） です。  
 Linux はシステム開発向けによく利用されます。  
-Linux 系の OS は複数あり、KCI では主に ubuntu を使用します。  
+Linux 系の OS は複数あり、OneScope では主に ubuntu を使用します。  
 ubuntu の発音は「うぶんつ」です。（正確には「うぶんとぅ」）
 
 ## ターミナル（Bash）の基本操作
