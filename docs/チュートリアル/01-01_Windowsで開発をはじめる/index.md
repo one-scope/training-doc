@@ -2,6 +2,30 @@
 
 # 01-01. Windows で開発をはじめる
 
+- [01-01. Windows で開発をはじめる](#01-01-windows-で開発をはじめる)
+  - [WSL をインストールにして、Ubuntu 環境を構築する](#wsl-をインストールにしてubuntu-環境を構築する)
+    - [WSL のインストール](#wsl-のインストール)
+    - [（オプション）Windows Terminal をインストールする](#オプションwindows-terminal-をインストールする)
+    - [（オプション）Windows Terminal でシェルの補完候補がない場合の警告音を消す](#オプションwindows-terminal-でシェルの補完候補がない場合の警告音を消す)
+  - [WSL 上の Ubuntu に Git 環境を構築する](#wsl-上の-ubuntu-に-git-環境を構築する)
+    - [参考：ターミナル（Bash）の基本操作](#参考ターミナルbashの基本操作)
+    - [参考：基本的な Linux コマンド](#参考基本的な-linux-コマンド)
+    - [gh のインストール](#gh-のインストール)
+    - [gh で GitHub にログインして認証情報をセットアップする](#gh-で-github-にログインして認証情報をセットアップする)
+    - [gitでのユーザ名と電子メールを設定する](#gitでのユーザ名と電子メールを設定する)
+  - [Docker Desktop をインストールして WSL バックエンドを有効化する](#docker-desktop-をインストールして-wsl-バックエンドを有効化する)
+  - [Visual Studio Code をインストールして、Dev Container 環境を構築する](#visual-studio-code-をインストールしてdev-container-環境を構築する)
+    - [Visual Studio Code をインストールする](#visual-studio-code-をインストールする)
+    - [Visual Studio Code の基本的なショートカット](#visual-studio-code-の基本的なショートカット)
+    - [Visual Studio Code の基本的な設定を行う](#visual-studio-code-の基本的な設定を行う)
+    - [必要な拡張機能をインストールする](#必要な拡張機能をインストールする)
+      - [拡張機能「WSL」のインストール](#拡張機能wslのインストール)
+      - [拡張機能「Dev Containers」のインストール](#拡張機能dev-containersのインストール)
+  - [Visual Studio Code でリポジトリを開き、開発を行う](#visual-studio-code-でリポジトリを開き開発を行う)
+    - [リポジトリを WSL ファイルシステム上に git clone する](#リポジトリを-wsl-ファイルシステム上に-git-clone-する)
+    - [開発用のブランチを作成する](#開発用のブランチを作成する)
+    - [Visual Studio Code を起動して、Dev Container 環境に接続する](#visual-studio-code-を起動してdev-container-環境に接続する)
+
 ## WSL をインストールにして、Ubuntu 環境を構築する
 
 ### WSL のインストール

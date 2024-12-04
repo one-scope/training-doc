@@ -2,6 +2,12 @@
 
 # 02-01. 入門 Visual Studio Code
 
+- [02-01. 入門 Visual Studio Code](#02-01-入門-visual-studio-code)
+  - [Visual Studio Code とは](#visual-studio-code-とは)
+  - [基本的なショートカット](#基本的なショートカット)
+  - [基本的な設定](#基本的な設定)
+  - [オススメの拡張機能](#オススメの拡張機能)
+
 ## Visual Studio Code とは
 
 Visual Studio Code は主にプログラミングを行うためのテキストエディタです。  
