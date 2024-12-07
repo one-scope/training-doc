@@ -7,6 +7,7 @@
   - [基本的なショートカット](#基本的なショートカット)
   - [基本的な設定](#基本的な設定)
   - [オススメの拡張機能](#オススメの拡張機能)
+  - [参考書籍・Web サイト](#参考書籍web-サイト)
 
 ## Visual Studio Code とは
 
@@ -52,3 +53,7 @@ Visual Studio Code を起動し、`Ctrl+,` を入力します。
 
 - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) - エラー内容をその行に表示します。通常、エラー箇所にカーソルを合わせポップアップを表示しなければエラー内容がわかりませんが、この拡張機能を入れると何も操作することなくエラー内容を確認できます。
 - [TODO Highlight v2](https://marketplace.visualstudio.com/items?itemName=jgclark.vscode-todo-highlight) - TODO コメントなどを強調表示します。また、ソースコードのどの位置に TODO コメントが残っているか、スクロールバーや TODO 一覧から確認できます。
+
+## 参考書籍・Web サイト
+
+- [【VSCode】よけいなものを消し去ってコードに集中しよう【ミニマリスト】](https://www.kurusugawa.jp/20210512-vscode-wide-area/) - vscode の画面を広く使うための Tips 集です。
