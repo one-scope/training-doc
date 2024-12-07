@@ -43,7 +43,7 @@ private class SerialPortListener implements SerialPortEventListener {
 テスト対象メソッドの処理結果が変化する要因を分析します。
 
 テスト対象メソッドの引数や、テスト対象メソッド内で使用しているフィールド、呼び出している外部メソッドの戻り値など、**テスト対象メソッド外部の要因で変化する値**を洗い出します。
-![入力値分析](image.png)
+![入力値分析](images/image.png)
 
 #### 入力値
 
@@ -56,7 +56,7 @@ private class SerialPortListener implements SerialPortEventListener {
 テスト対象メソッドの実行により変化する値などを洗い出します。
 
 テスト対象メソッドの戻り値や、テスト対象メソッド内で使用しているフィールド、呼び出している外部メソッドの引数などがこれにあたります。
-![出力値分析](image-1.png)
+![出力値分析](images/image-1.png)
 
 #### 出力値
 

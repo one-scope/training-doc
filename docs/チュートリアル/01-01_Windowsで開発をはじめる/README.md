@@ -167,7 +167,7 @@ Visual Studio Code は vscode と表記されることが多いです。
 
 Visual Studio Code を起動し、`Ctrl+,` を入力します。
 
-「設定」タブが開かれるので、画面右上の![設定（JSON）を開く](image.png)をクリックし、JSON 形式の設定ファイルを開きます。
+「設定」タブが開かれるので、画面右上の![設定（JSON）を開く](images/image.png)をクリックし、JSON 形式の設定ファイルを開きます。
 
 次の内容を入力して保存してください。
 
@@ -266,9 +266,9 @@ Visual Studio Code が起動したら、`Ctrl+Shift+p` を入力し、コマン�
 
 コマンドパレットから `Dev Containers: Rebuild and Reopen in Container` を実行します。  
 コマンドパレットの入力は補完されるので、おそらく「rebuild」を入力すれば候補に出てきます。  
-![コマンドパレット](image-1.png)
+![コマンドパレット](images/image-1.png)
 
 Docker イメージをビルドするため、しばらく時間がかかります。  
-※ 画面右下の ![ログの表示](image-2.png) をクリックすると、ビルドログを確認できます。
+※ 画面右下の ![ログの表示](images/image-2.png) をクリックすると、ビルドログを確認できます。
 
-画面左下の表示が ![開発コンテナー](image-3.png) となれば成功です。
+画面左下の表示が ![開発コンテナー](images/image-3.png) となれば成功です。
