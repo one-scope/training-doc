@@ -3,6 +3,7 @@
 ## チュートリアル
 
 - [01-01. Windows で開発をはじめる](docs/チュートリアル/01-01_Windowsで開発をはじめる/README.md)
+- [01-02. Mac (arm) で開発を始める](docs/チュートリアル/01-02_Mac(arm)で開発をはじめる/README.md)
 - [02-01. 入門 Visual Studio Code](docs/チュートリアル/02-01_入門VisualStudioCode/README.md)
 - [02-02. 入門 Linux](docs/チュートリアル/02-02_入門Linux/README.md)
 - [02-03. 入門 Git](docs/チュートリアル/02-03_入門Git/README.md)

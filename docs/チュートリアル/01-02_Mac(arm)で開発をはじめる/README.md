@@ -1,83 +1,35 @@
 [戻る](../../../README.md)
 
-# 01-01. Windows で開発をはじめる
+# 01-02. Mac (arm) で開発を始める
 
-- [01-01. Windows で開発をはじめる](#01-01-windows-で開発をはじめる)
-  - [WSL をインストールにして、Ubuntu 環境を構築する](#wsl-をインストールにしてubuntu-環境を構築する)
-    - [WSL のインストール](#wsl-のインストール)
-    - [（オプション）Windows Terminal をインストールする](#オプションwindows-terminal-をインストールする)
-    - [（オプション）Windows Terminal でシェルの補完候補がない場合の警告音を消す](#オプションwindows-terminal-でシェルの補完候補がない場合の警告音を消す)
-  - [WSL 上の Ubuntu に Git 環境を構築する](#wsl-上の-ubuntu-に-git-環境を構築する)
+- [01-02. Mac (arm) で開発を始める](#01-02-mac-arm-で開発を始める)
+  - [Git 環境を構築する](#git-環境を構築する)
+    - [ターミナルを起動する](#ターミナルを起動する)
     - [参考：ターミナル（Bash）の基本操作](#参考ターミナルbashの基本操作)
     - [参考：基本的な Linux コマンド](#参考基本的な-linux-コマンド)
+    - [Homebrew をインストールする](#homebrew-をインストールする)
     - [gh のインストール](#gh-のインストール)
     - [gh で GitHub にログインして認証情報をセットアップする](#gh-で-github-にログインして認証情報をセットアップする)
     - [git でのユーザ名と電子メールを設定する](#git-でのユーザ名と電子メールを設定する)
   - [Docker Desktop をインストールして WSL バックエンドを有効化する](#docker-desktop-をインストールして-wsl-バックエンドを有効化する)
   - [Visual Studio Code をインストールして、Dev Container 環境を構築する](#visual-studio-code-をインストールしてdev-container-環境を構築する)
     - [Visual Studio Code をインストールする](#visual-studio-code-をインストールする)
+    - [code コマンドをインストールする](#code-コマンドをインストールする)
     - [Visual Studio Code の基本的なショートカット](#visual-studio-code-の基本的なショートカット)
     - [Visual Studio Code の基本的な設定を行う](#visual-studio-code-の基本的な設定を行う)
     - [必要な拡張機能をインストールする](#必要な拡張機能をインストールする)
-      - [拡張機能「WSL」のインストール](#拡張機能wslのインストール)
       - [拡張機能「Dev Containers」のインストール](#拡張機能dev-containersのインストール)
   - [Visual Studio Code でリポジトリを開き、開発を行う](#visual-studio-code-でリポジトリを開き開発を行う)
-    - [リポジトリを WSL ファイルシステム上に git clone する](#リポジトリを-wsl-ファイルシステム上に-git-clone-する)
+    - [リポジトリを git clone する](#リポジトリを-git-clone-する)
     - [開発用のブランチを作成する](#開発用のブランチを作成する)
     - [Visual Studio Code を起動して、Dev Container 環境に接続する](#visual-studio-code-を起動してdev-container-環境に接続する)
 
-## WSL をインストールにして、Ubuntu 環境を構築する
+## Git 環境を構築する
 
-### WSL のインストール
+### ターミナルを起動する
 
-公式ドキュメントを参照して WSL をインストールしてください。
-<https://learn.microsoft.com/ja-jp/windows/wsl/install>
-
-### （オプション）Windows Terminal をインストールする
-
-WSL を起動するターミナルとして、Windows Terminal をセットアップしておくと便利です。  
-まず、公式ドキュメントに従って Windwos Terminal をインストールします。  
-<https://learn.microsoft.com/ja-jp/windows/terminal/install>
-
-次に、Windows Terminal を起動したときに WSL が起動するようにプロファイルを設定します。  
-Windows Terminal を起動し、タイトルバーを右クリック、「設定」を選択します。  
-画面左下に「JSON ファイルを開く」というボタンがあるので、押下します。
-
-JSON ファイルを見ると、`profiles` の `list` に各ターミナル向けのプロファイルが列挙されています。  
-WSL2 のプロファイルは `source` が `Windows.Terminal.Wsl` になっています。  
-この WSL2 のプロファイルの `guid` を、設定ファイルの `defaultProfile` にセットしてください。
-
-```json
-{
-    "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-    "profiles":
-    {
-        "list":
-        [
-            {
-                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}", // これを defaultProfile にセットする
-                "hidden": false,
-                "name": "Ubuntu-20.04",
-                "source": "Windows.Terminal.Wsl"
-            }
-        ]
-    }
-}
-```
-
-これで Windows Terminal を起動すると、自動的に WSL の Ubuntu に接続できます。
-
-### （オプション）Windows Terminal でシェルの補完候補がない場合の警告音を消す
-
-ターミナルで補完などしたときに候補が無い場合に Windows の警告音が出ます。  
-耳障りなので、消してしまいましょう。
-
-Windows Terminal の設定ファイルの WSL2 のプロファイルに `"bellStyle": "none"` を追加します。
-
-## WSL 上の Ubuntu に Git 環境を構築する
-
-ここから、Ubuntu でのコマンドライン上での作業となります。  
-Windows Terminal などを起動し、WSL に接続してください。
+公式ドキュメントに従って Spotlight を起動して、 `terminal` と検索してターミナルを開きます。  
+<https://support.apple.com/ja-jp/guide/mac-help/mchlp1008/mac>
 
 ### 参考：ターミナル（Bash）の基本操作
 
@@ -110,18 +62,23 @@ Windows Terminal などを起動し、WSL に接続してください。
 | mkdir -p [ディレクトリ名]                               | ディレクトリを作成します。                                           |
 | less [ファイル名]                                       | ファイルの内容を閲覧します。終了するには `q` キーを押下します。      |
 
+### Homebrew をインストールする
+
+公式ドキュメントを参照して Homebrew をインストールしてください。  
+<https://brew.sh/>
+
 ### gh のインストール
 
 GitHub の操作、とくにプライベートリポジトリを扱うときの認証情報の解決に使用します。
 
 公式ドキュメントに従い、コマンドを入力してください。  
-<https://github.com/cli/cli/blob/trunk/docs/install_linux.md>
+<https://github.com/cli/cli/blob/trunk/README.md#homebrew>
 
 ### gh で GitHub にログインして認証情報をセットアップする
 
 次のコマンドを実行します。
 
-```bash
+```zsh
 gh auth login
 ```
 
@@ -136,7 +93,7 @@ Web ブラウザが起動するので、先ほどコピーした認証コード�
 
 次のコマンドを実行します．
 
-```bash
+```zsh
 git config --global user.name "YOUR_NAME"
 git config --global user.email "YOUR_EMAIL"
 ```
@@ -144,7 +101,7 @@ git config --global user.email "YOUR_EMAIL"
 ## Docker Desktop をインストールして WSL バックエンドを有効化する
 
 公式ドキュメントに従いインストールしてください。  
-<https://docs.docker.com/desktop/wsl/>
+<https://docs.docker.com/desktop/setup/install/mac-install/>
 
 ## Visual Studio Code をインストールして、Dev Container 環境を構築する
 
@@ -153,19 +110,30 @@ Visual Studio Code は vscode と表記されることが多いです。
 ### Visual Studio Code をインストールする
 
 公式サイトからインストーラをダウンロードして、ウィザードに従ってインストールしてください。  
-<https://code.visualstudio.com/download>
+<https://code.visualstudio.com/docs/setup/mac#_installation>
+
+### code コマンドをインストールする
+
+公式サイトに従って code コマンドを使用できるようにしてください。  
+<https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line>
+
+ターミナルで code コマンドを実行し、 PATH が通っているか確認します。
+
+```zsh
+code .
+```
 
 ### Visual Studio Code の基本的なショートカット
 
 | ショートカット | 効果               | 説明                                                                                                                                                                       |
 | -------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ctrl+Shift+p   | コマンドパレット   | コマンドパレットを表示します。      Visual Studio Code やその拡張機能が提供する強力なコマンドをすばやく実行します。                                                        |
-| F2             | シンボルの名前変更 | 変数名や関数名を一括で変更します。文字列置換と異なり、シンボル（変数や関数など）を認識して一括で変更できるので、誤爆がありません。ファイルを跨いで変更することも可能です。 |
-| F12            | 定義へ移動         | 関数などの実装箇所にジャンプします。関数のシグネチャやコメント、実装内容を確認したくなったときに使用します。                                                               |
+| ⌘+⇧+P          | コマンドパレット   | コマンドパレットを表示します。      Visual Studio Code やその拡張機能が提供する強力なコマンドをすばやく実行します。                                                        |
+| fn+F2          | シンボルの名前変更 | 変数名や関数名を一括で変更します。文字列置換と異なり、シンボル（変数や関数など）を認識して一括で変更できるので、誤爆がありません。ファイルを跨いで変更することも可能です。 |
+| fn+F12         | 定義へ移動         | 関数などの実装箇所にジャンプします。関数のシグネチャやコメント、実装内容を確認したくなったときに使用します。                                                               |
 
 ### Visual Studio Code の基本的な設定を行う
 
-Visual Studio Code を起動し、`Ctrl+,` を入力します。
+Visual Studio Code を起動し、`⌘+,` を入力します。
 
 「設定」タブが開かれるので、画面右上の![設定（JSON）を開く](images/image.png)をクリックし、JSON 形式の設定ファイルを開きます。
 
@@ -191,14 +159,7 @@ Visual Studio Code を起動し、`Ctrl+,` を入力します。
 
 ### 必要な拡張機能をインストールする
 
-`Ctrl+Shift+x` を入力して、拡張機能メニューを表示します。
-
-#### 拡張機能「WSL」のインストール
-
-Visual Studio Code を WSL 上の Ubuntu で使用するために、「WSL」拡張機能をインストールします。
-
-検索ボックスに「ms-vscode-remote.remote-wsl」と入力します。  
-検索結果の一覧から「WSL」を選択し「インストール」ボタンを押下します。
+`⌘+⇧+X` を入力して、拡張機能メニューを表示します。
 
 #### 拡張機能「Dev Containers」のインストール
 
@@ -211,35 +172,20 @@ Dev Container を利用すると、開発時に利用するOS、OSにインス�
 
 ## Visual Studio Code でリポジトリを開き、開発を行う
 
-### リポジトリを WSL ファイルシステム上に git clone する
+### リポジトリを git clone する
 
-WSL に接続して git clone を行います。
-
-git clone するときのディレクトリについて気を付けるべきことがあります。  
-WSL の Ubuntu からは、Ubuntu のファイルシステムと Windows のファイルシステムの両方が見えている状態です。  
-`df` コマンドを実行してみてください。これはマウントされているファイルシステムを一覧するコマンドです。  
-ここで Filesystem の欄が `C:\` や `drvfs` になっているファイルシステムが見つかるはずです。これが Windows のファイルシステムです。  
-Windows のファイルシステムは Linux のファイルシステムと異なり、通常はファイルごとに書き込み権限や実行権限などを細かく設定できません。また、WSL からの Windows ファイルシステムの利用は非常に低速です。  
-こういった理由から、通常の開発では Windows のファイルシステムを利用すべきではありません。  
-git clone するときのディレクトリも Linux のファイルシステム上のディレクトリにしましょう。  
-たとえば、「~/workspace/github.com/one-scope/リポジトリ名」などです。  
-
-ディレクトリを作成するには次のコマンドを実行します。
-
-```bash
-mkdir -p ~/workspace/github.com/one-scope
-```
+ターミナルを開いて git clone を行います。
 
 次のコマンドで clone したいディレクトリへ移動して、リポジトリを clone します。
 
-```bash
+```zsh
 cd ~/workspace/github.com/one-scope
 git clone https://github.com/one-scope/example-repository
 ```
 
 clone できたら、リポジトリのディレクトリへ移動します。
 
-```bash
+```zsh
 cd ./example-repository
 ```
 
@@ -262,7 +208,7 @@ clone したリポジトリのルートディレクトリで次のコマンド�
 code .
 ```
 
-Visual Studio Code が起動したら、`Ctrl+Shift+p` を入力し、コマンドパレットを表示します。
+Visual Studio Code が起動したら、`⌘+⇧+P` を入力し、コマンドパレットを表示します。
 
 コマンドパレットから `Dev Containers: Rebuild and Reopen in Container` を実行します。  
 コマンドパレットの入力は補完されるので、おそらく「rebuild」を入力すれば候補に出てきます。  
