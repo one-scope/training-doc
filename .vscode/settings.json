@@ -1,0 +1,15 @@
+{
+    "terminal.integrated.allowChords": false,
+
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.markdownlint": "explicit",
+        },
+    },
+}
