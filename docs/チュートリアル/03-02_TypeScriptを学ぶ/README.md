@@ -9,14 +9,13 @@
 
 ## 学習リソース
 
-| レベル | リンク                                                                                                                                 | 概要                                                                           |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 1      | 開発環境について                                                                                                                       | KCI での TypeScript + React の開発環境です。README.md に環境の説明があります。 |
-| 2      | [サバイバルTypeScript](https://typescriptbook.jp/)                                                                                     | TypeScript の基本機能を知ります。                                              |
-| 3      | [API Reference](https://ja.react.dev/reference/react)                                                                                  | React 公式のリファレンスです。適宜参照してください。                           |
-| 3      | [Learn React](https://ja.react.dev/learn)                                                                                              | React 公式のチュートリアルです。                                               |
-| 4      | [Documentation - Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)                                       | TypeScript の便利な組み込み型を知ります。                                      |
-| 5      | [101 React Tips & Tricks For Beginners To Experts](https://dev.to/_ndeyefatoudiop/101-react-tips-tricks-for-beginners-to-experts-4m11) | よりよい React の書き方を学びます。                                            |
+| レベル | リンク                                                                                                                                 | 概要                                                 |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| 1      | [サバイバルTypeScript](https://typescriptbook.jp/)                                                                                     | TypeScript の基本機能を知ります。                    |
+| 2      | [API Reference](https://ja.react.dev/reference/react)                                                                                  | React 公式のリファレンスです。適宜参照してください。 |
+| 2      | [Learn React](https://ja.react.dev/learn)                                                                                              | React 公式のチュートリアルです。                     |
+| 3      | [Documentation - Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)                                       | TypeScript の便利な組み込み型を知ります。            |
+| 4      | [101 React Tips & Tricks For Beginners To Experts](https://dev.to/_ndeyefatoudiop/101-react-tips-tricks-for-beginners-to-experts-4m11) | よりよい React の書き方を学びます。                  |
 
 ## 制御コンポーネントと非制御コンポーネント
 
