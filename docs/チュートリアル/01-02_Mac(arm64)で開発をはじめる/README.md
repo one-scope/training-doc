@@ -13,7 +13,7 @@ arm64 の Mac 向けに、開発をはじめるまでの手順を記載します
     - [gh のインストール](#gh-のインストール)
     - [gh で GitHub にログインして認証情報をセットアップする](#gh-で-github-にログインして認証情報をセットアップする)
     - [git でのユーザ名と電子メールを設定する](#git-でのユーザ名と電子メールを設定する)
-  - [Docker Desktop をインストールして WSL バックエンドを有効化する](#docker-desktop-をインストールして-wsl-バックエンドを有効化する)
+  - [Docker Desktop をインストールする](#docker-desktop-をインストールする)
   - [Visual Studio Code をインストールして、Dev Container 環境を構築する](#visual-studio-code-をインストールしてdev-container-環境を構築する)
     - [Visual Studio Code をインストールする](#visual-studio-code-をインストールする)
     - [code コマンドをインストールする](#code-コマンドをインストールする)
@@ -100,7 +100,7 @@ git config --global user.name "YOUR_NAME"
 git config --global user.email "YOUR_EMAIL"
 ```
 
-## Docker Desktop をインストールして WSL バックエンドを有効化する
+## Docker Desktop をインストールする
 
 公式ドキュメントに従いインストールしてください。  
 <https://docs.docker.com/desktop/setup/install/mac-install/>
