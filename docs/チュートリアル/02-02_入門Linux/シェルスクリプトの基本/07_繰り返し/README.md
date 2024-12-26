@@ -25,15 +25,15 @@ done
 
 ```bash
 for i in $(seq 1 5); do
-  echo "数字: $i"
+  echo "数字: ${i}"
 done
 ```
 
 また、ワイルドカードを使用してディレクトリ内のファイルに対して処理を実行することも可能です。
 
 ```bash
-for file in *.txt; do
-  echo "テキストファイル: $file"
+for filename in *.txt; do
+  echo "テキストファイル: ${filename}"
 done
 ```
 
