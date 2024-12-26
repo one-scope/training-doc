@@ -1,8 +1,8 @@
 [戻る](../../../README.md)
 
-# 02-01. 入門 Visual Studio Code
+# 入門 Visual Studio Code
 
-- [02-01. 入門 Visual Studio Code](#02-01-入門-visual-studio-code)
+- [入門 Visual Studio Code](#入門-visual-studio-code)
   - [Visual Studio Code とは](#visual-studio-code-とは)
   - [基本的なショートカット](#基本的なショートカット)
   - [基本的な設定](#基本的な設定)

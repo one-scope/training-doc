@@ -1,8 +1,8 @@
 [戻る](../../../README.md)
 
-# 02-04. 入門 Docker
+# 入門 Docker
 
-- [02-04. 入門 Docker](#02-04-入門-docker)
+- [入門 Docker](#入門-docker)
   - [Docker とは](#docker-とは)
   - [基本的な Docker の用語](#基本的な-docker-の用語)
   - [基本的な docker の操作](#基本的な-docker-の操作)

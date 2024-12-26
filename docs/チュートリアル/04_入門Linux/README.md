@@ -1,8 +1,8 @@
 [戻る](../../../README.md)
 
-# 02-02. 入門 Linux
+# 入門 Linux
 
-- [02-02. 入門 Linux](#02-02-入門-linux)
+- [入門 Linux](#入門-linux)
   - [Linux とは](#linux-とは)
   - [ターミナル（Bash）の基本操作](#ターミナルbashの基本操作)
   - [基本的な Linux コマンド](#基本的な-linux-コマンド)

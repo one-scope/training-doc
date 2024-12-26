@@ -1,10 +1,10 @@
 [戻る](../../../README.md)
 
-# 01-01. Windows で開発をはじめる
+# Windows で開発をはじめる
 
 Windows 10,11 向けに、開発をはじめるまでの手順を記載します。
 
-- [01-01. Windows で開発をはじめる](#01-01-windows-で開発をはじめる)
+- [Windows で開発をはじめる](#windows-で開発をはじめる)
   - [WSL をインストールにして、Ubuntu 環境を構築する](#wsl-をインストールにしてubuntu-環境を構築する)
     - [WSL のインストール](#wsl-のインストール)
     - [（オプション）Windows Terminal をインストールする](#オプションwindows-terminal-をインストールする)

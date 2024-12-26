@@ -1,8 +1,8 @@
 [戻る](../../../README.md)
 
-# 03-02. TypeScript + React を学ぶ
+# TypeScript + React を学ぶ
 
-- [03-02. TypeScript + React を学ぶ](#03-02-typescript--react-を学ぶ)
+- [TypeScript + React を学ぶ](#typescript--react-を学ぶ)
   - [学習リソース](#学習リソース)
   - [制御コンポーネントと非制御コンポーネント](#制御コンポーネントと非制御コンポーネント)
   - [参考書籍・Web サイト](#参考書籍web-サイト)
