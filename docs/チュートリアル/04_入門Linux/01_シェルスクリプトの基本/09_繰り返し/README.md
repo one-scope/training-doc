@@ -45,5 +45,34 @@ for filename in *.txt; do
 done
 ```
 
+### `break` と `continue`
+
+シェルスクリプトの `for` ループでも、`break` と `continue` が使えます。  
+`break` は `for` ループ全体を終了し、`continue` は `for` ループ内の処理をスキップして次の繰り返しに進みます。
+
+次の例では、`break` を使用して `i` が `3` のときに `for` ループを終了するようにしています。  
+出力結果は `1 2` です。
+
+```bash
+for i in {1..5}; do
+    if [ ${i} -eq 3 ]; then
+        break  # i が 3 のとき、for ループを終了する
+    fi
+    echo ${i}
+done
+```
+
+一方、次の例では、`continue` を使用して `i` が `3` のときにループ内の処理をスキップして次の繰り返しに進むようにしています。  
+出力結果は `1 2 4 5` です。
+
+```bash
+for i in {1..5}; do
+    if [ ${i} -eq 3 ]; then
+        continue  # i が 3 のとき、以降の処理をスキップして次の繰り返しに進む
+    fi
+    echo ${i}
+done
+```
+
 ----
 [前へ](../08_ブレース展開/README.md) | [次へ](../10_シェルオプション/README.md)
