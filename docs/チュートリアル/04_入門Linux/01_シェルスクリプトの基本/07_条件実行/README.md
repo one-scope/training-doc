@@ -25,4 +25,4 @@ rm non_existent_file || echo "ファイルが存在しません"
 ```
 
 ----
-[前へ](../05_条件分岐とtestコマンド/README.md) | [次へ](../07_繰り返し/README.md)
+[前へ](../06_条件分岐とtestコマンド/README.md) | [次へ](../08_ブレース展開/README.md)

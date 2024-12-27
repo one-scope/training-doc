@@ -71,4 +71,4 @@ ls non_existent_file | cat || echo "パイプラインが失敗しました"
 ```
 
 ----
-[前へ](../07_繰り返し/README.md)
+[前へ](../09_繰り返し/README.md)

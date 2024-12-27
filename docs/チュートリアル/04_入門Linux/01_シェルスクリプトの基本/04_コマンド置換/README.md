@@ -13,4 +13,4 @@ echo "Today is $(date)"
 ```
 
 ----
-[前へ](../02_パイプ/README.md) | [次へ](../04_ヒアドキュメント/README.md)
+[前へ](../03_パイプ/README.md) | [次へ](../05_ヒアドキュメント/README.md)
