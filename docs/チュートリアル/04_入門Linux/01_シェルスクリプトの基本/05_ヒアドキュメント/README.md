@@ -16,7 +16,9 @@ You can write multiple lines of text here.
 EOS
 ```
 
-また、ヒアドキュメントの中で変数を展開することも可能です。
+## 変数を展開する
+
+ヒアドキュメントの中で変数を展開することも可能です。
 
 ```bash
 name="Alice"
@@ -25,6 +27,8 @@ Hello, ${name}!
 Welcome to the script.
 EOS
 ```
+
+## 変数の展開を禁止する
 
 変数の展開を禁止する場合は、ラベルを `''` で囲みます。
 
