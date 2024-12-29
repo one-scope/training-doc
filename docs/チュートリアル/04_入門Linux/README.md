@@ -75,6 +75,7 @@ ubuntu の発音は「うぶんつ」です。（正確には「うぶんとぅ�
 
 - [`find` コマンドの基本](03_findコマンドの基本/README.md)
 - [`grep` コマンドの基本](04_grepコマンドの基本/README.md)
+- [`sed` コマンドの基本](05_sedコマンドの基本/README.md)
 
 ## 参考書籍・Web サイト
 
