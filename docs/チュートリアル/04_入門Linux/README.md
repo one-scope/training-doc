@@ -73,6 +73,7 @@ ubuntu の発音は「うぶんつ」です。（正確には「うぶんとぅ�
 
 ## よく利用する Linux コマンド
 
+- [`curl` コマンドの基本](02_curlコマンドの基本/README.md)
 - [`find` コマンドの基本](03_findコマンドの基本/README.md)
 - [`grep` コマンドの基本](04_grepコマンドの基本/README.md)
 - [`sed` コマンドの基本](05_sedコマンドの基本/README.md)
