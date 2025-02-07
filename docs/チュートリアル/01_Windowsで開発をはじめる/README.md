@@ -38,7 +38,7 @@ Windows 10,11 向けに、開発をはじめるまでの手順を記載します
 ### （オプション）Windows Terminal をインストールする
 
 WSL を起動するターミナルとして、Windows Terminal をセットアップしておくと便利です。  
-まず、公式ドキュメントに従って Windwos Terminal をインストールします。  
+まず、公式ドキュメントにしたがって Windwos Terminal をインストールします。  
 <https://learn.microsoft.com/ja-jp/windows/terminal/install>
 
 次に、Windows Terminal を起動したときに WSL が起動するようにプロファイルを設定します。  
@@ -71,7 +71,7 @@ WSL2 のプロファイルは `source` が `Windows.Terminal.Wsl` になって�
 
 ### （オプション）Windows Terminal でシェルの補完候補がない場合の警告音を消す
 
-ターミナルで補完などしたときに候補が無い場合に Windows の警告音が出ます。  
+ターミナルで補完などしたときに候補がない場合に Windows の警告音が出ます。  
 耳障りなので、消してしまいましょう。
 
 Windows Terminal の設定ファイルの WSL2 のプロファイルに `"bellStyle": "none"` を追加します。
@@ -137,7 +137,7 @@ Web ブラウザが起動するので、先ほどコピーした認証コード�
 
 ### git でのユーザ名と電子メールを設定する
 
-次のコマンドを実行します．
+次のコマンドを実行します。
 
 ```bash
 git config --global user.name "YOUR_NAME"
@@ -155,7 +155,7 @@ Visual Studio Code は vscode と表記されることが多いです。
 
 ### Visual Studio Code をインストールする
 
-公式サイトからインストーラをダウンロードして、ウィザードに従ってインストールしてください。  
+公式サイトからインストーラーをダウンロードして、ウィザードにしたがってインストールしてください。  
 <https://code.visualstudio.com/download>
 
 ### Visual Studio Code の基本的なショートカット

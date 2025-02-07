@@ -31,7 +31,7 @@ type (
 
 ### for range での利用
 
-`iter.Seq` を実装したイテレータは、次のように for range で利用することができます。
+`iter.Seq` を実装したイテレータは、次のように for range で利用できます。
 
 ```go
 // 仮にイテレータ（iter.Seq）を返す関数があるとき、

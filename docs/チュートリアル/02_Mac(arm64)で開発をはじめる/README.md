@@ -30,7 +30,7 @@ arm64 の Mac 向けに、開発をはじめるまでの手順を記載します
 
 ### ターミナルを起動する
 
-公式ドキュメントに従って Spotlight を起動して、 `terminal` と検索してターミナルを開きます。  
+公式ドキュメントにしたがって Spotlight を起動して、 `terminal` と検索してターミナルを開きます。  
 <https://support.apple.com/ja-jp/guide/mac-help/mchlp1008/mac>
 
 ### 参考：ターミナル（Bash）の基本操作
@@ -94,7 +94,7 @@ Web ブラウザが起動するので、先ほどコピーした認証コード�
 
 ### git でのユーザ名と電子メールを設定する
 
-次のコマンドを実行します．
+次のコマンドを実行します。
 
 ```zsh
 git config --global user.name "YOUR_NAME"
@@ -112,12 +112,12 @@ Visual Studio Code は vscode と表記されることが多いです。
 
 ### Visual Studio Code をインストールする
 
-公式サイトからインストーラをダウンロードして、ウィザードに従ってインストールしてください。  
+公式サイトからインストーラーをダウンロードして、ウィザードにしたがってインストールしてください。  
 <https://code.visualstudio.com/docs/setup/mac#_installation>
 
 ### code コマンドをインストールする
 
-公式サイトに従って code コマンドを使用できるようにしてください。  
+公式サイトにしたがって code コマンドを使用できるようにしてください。  
 <https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line>
 
 ターミナルで code コマンドを実行し、 PATH が通っているか確認します。

@@ -49,7 +49,7 @@ func subtract(a, b int) int {
 
 ## パッケージの分割
 
-パッケージを分割するときは、単一責任の原則（SRP: Single Responsibility Principle） を意識することが重要です。  
+パッケージを分割するときは、単一責任の原則（SRP: Single Responsibility Principle）を意識することが重要です。  
 1つのパッケージが複数の責務を持つと、再利用性や保守性が低下します。
 
 ### 責務の分離ができていない例

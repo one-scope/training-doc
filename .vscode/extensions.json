@@ -1,6 +1,7 @@
 {
     "recommendations": [
-        "yzhang.markdown-all-in-one",
         "DavidAnson.vscode-markdownlint",
+        "ICS.japanese-proofreading",
+        "yzhang.markdown-all-in-one",
     ]
 }
