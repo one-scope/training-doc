@@ -124,9 +124,5 @@ func (u *UppercaseWriter) Write(p []byte) (int, error) {
     return u.w.Write(converted)
 ```
 
-## 参考
-
-- [Effective Go - Readers and Writers](https://go.dev/doc/effective_go#readers_and_writers)
-
 ----
 [前へ](../03_インターフェースによる抽象化/README.md) | [次へ](../05_errorの判定と伝搬方法/README.md)

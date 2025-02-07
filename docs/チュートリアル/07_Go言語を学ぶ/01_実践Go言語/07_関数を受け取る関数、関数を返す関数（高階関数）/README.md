@@ -54,9 +54,5 @@ func main() {
 }
 ```
 
-## 参考
-
-- [Effective Go - Functions](https://go.dev/doc/effective_go#functions)
-
 ----
 [前へ](../06_関数と関数リテラル、クロージャ/README.md) | [次へ](../08_関数にメソッドを追加する/README.md)

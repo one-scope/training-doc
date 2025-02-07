@@ -78,9 +78,5 @@ func main() {
 
 この例では `message` という変数を `sayHello` 関数がキャプチャしており、`message` の値が変わると `sayHello` の出力も変わります。
 
-## 参考
-
-- [Effective Go - Functions](https://go.dev/doc/effective_go#functions)
-
 ----
 [前へ](../05_errorの判定と伝搬方法/README.md) | [次へ](../07_関数を受け取る関数、関数を返す関数（高階関数）/README.md)

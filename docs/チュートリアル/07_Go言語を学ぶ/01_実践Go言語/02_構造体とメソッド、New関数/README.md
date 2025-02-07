@@ -104,9 +104,5 @@ func CreateUser(name, email string) (*User, error) {
 }
 ```
 
-## 参考
-
-- [Effective Go - Structs](https://go.dev/doc/effective_go#structs)
-
 ----
 [前へ](../01_パッケージと可視性/README.md) | [次へ](../03_インターフェースによる抽象化/README.md)

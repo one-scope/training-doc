@@ -50,9 +50,5 @@ func main() {
 - シンプルな関数をそのままインターフェースに適合させられる
 - 柔軟に関数の動作を差し替えられる
 
-## 参考
-
-- [Effective Go - Methods](https://go.dev/doc/effective_go#methods)
-
 ----
 [前へ](../07_関数を受け取る関数、関数を返す関数（高階関数）/README.md) | [次へ](../09_ジェネリクスと型制約/README.md)

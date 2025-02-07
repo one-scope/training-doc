@@ -116,9 +116,5 @@ Go 言語では「～する人」というニュアンス（名詞化）で 動�
 | `database/sql`  | `DB`                | データベース接続管理                                                               |
 | `database/sql`  | `Tx`                | トランザクション管理                                                               |
 
-## 参考
-
-- [Effective Go - Interfaces](https://go.dev/doc/effective_go#interfaces)
-
 ----
 [前へ](../02_構造体とメソッド、New関数/README.md) | [次へ](../04_io.Readerとio.Writer/README.md)

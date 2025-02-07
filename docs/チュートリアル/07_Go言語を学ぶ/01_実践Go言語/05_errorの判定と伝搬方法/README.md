@@ -122,9 +122,5 @@ func DoSomething() error {
 }
 ```
 
-## 参考
-
-- [Effective Go - Errors](https://go.dev/doc/effective_go#errors)
-
 ----
 [前へ](../04_io.Readerとio.Writer/README.md) | [次へ](../06_関数と関数リテラル、クロージャ/README.md)
