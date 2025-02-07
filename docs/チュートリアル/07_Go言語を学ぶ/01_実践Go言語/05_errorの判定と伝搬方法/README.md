@@ -65,46 +65,62 @@ Go 言語のエラーはラップすることで基底エラーを持つこと�
 
 ### 利用例
 
-- 伝搬すべきエラーが存在せず、利用者側でエラーを特定する必要もない場合
+#### `errors.New` でエラーをつくり、そのまま返す
 
-  ```go
-  func DoSomething() error {
-      return errors.New("failed to open file")
-  }
-  ```
+伝搬すべきエラーが存在せず、利用者側でエラーを特定する必要もない場合にこの方法をとります。
 
-- 関数内で発生したエラーをそのまま伝搬し、利用者側でエラーを特定できるようにする場合
+```go
+func DoSomething() error {
+    return errors.New("failed to open file")
+}
+```
 
-  ```go
-  func DoSomething() error {
-      err := doSomething()
-      return fmt.Errorf("failed to open file: %w", err)
-  }
-  ```
+#### 関数内で発生したエラーをそのまま伝搬する
 
-- パッケージ内で共通のエラー変数を定義し、利用者側でエラーを特定できるようにする場合
+元のエラー情報を保持しつつ、この関数においてこれがどのようなエラーであるのかということも説明しています。  
+人間が見て理解するためにより多くの情報を提供するかたちです。
 
-  ```go
-  var ErrNotFound = errors.New("not found")
-  
-  func DoSomething() error {
-      return ErrNotFound
-  }
-  ```
-
-- パッケージ内で基底エラーとするエラー変数を定義し、利用者側でエラーを特定できるようにする場合
-
-  ```go
-  var ErrNotFound = errors.New("not found")
-  
-  func DoSomething() error {
-      return fmt.Errorf("failed to open file: %w", ErrNotFound)
-  }
-  ```
+```go
+func DoSomething() error {
+    err := doSomething()
+    return fmt.Errorf("failed to open file: %w", err)
+}
+```
 
 関数内部で発生したエラーをそのまま返すことは避けましょう。  
 そのエラーが実際にはどこで発生したエラーであるのかがわからなくなってしまうためです。  
 少なくともパッケージ単位で発生元がわかるようにラップすることを推奨します。
+
+#### パッケージ内で共通のエラー変数を定義し、利用者側でエラーを特定できるようにする
+
+パッケージが提供するエラー変数をそのまま返すことで、利用者側で `errors.Is` でエラーを特定できるようにする方法です。  
+この方法をとる場合、関数のドキュメンテーションコメントでどのような場合にどのエラー変数を返すのかを記載して、関数の仕様として特定のエラー変数を返すことを明らかにしましょう。
+
+```go
+var ErrNotFound = errors.New("not found")
+
+// DoSomething は xxx の関数です。
+// xxx が失敗した場合、ErrNotFound を返します。
+func DoSomething() error {
+    return ErrNotFound
+}
+```
+
+慣習的に、グローバルに定義するエラー変数の名前は `Err` ではじめます。
+
+#### パッケージ内で基底エラーとするエラー変数を定義し、利用者側でエラーを特定できるようにする
+
+利用者側で `errors.Is` でエラーを特定できるようにしつつも、エラーが発生した詳細な状況をさらに説明する方法です。
+
+```go
+var ErrNotFound = errors.New("not found")
+
+// DoSomething は xxx の関数です。
+// xxx が失敗した場合、ErrNotFound を返します。
+func DoSomething() error {
+    return fmt.Errorf("failed to open file: %w", ErrNotFound)
+}
+```
 
 ## 参考
 
