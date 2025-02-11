@@ -86,6 +86,26 @@ for k, v := range All[int, string]() {
 | `func Insert[Map ~map[K]V, K comparable, V any](m Map, seq iter.Seq2[K, V])` | イテレータから取り出したキーと値のペアをマップに挿入する |
 | `func Collect[K comparable, V any](seq iter.Seq2[K, V]) map[K]V`             | キーと値のペアのイテレータから、新たなマップを生成する   |
 
+#### strings パッケージ
+
+| 関数                                                               | 概要                                                                   |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------- |
+| `func Lines(s string) iter.Seq[string]`                            | 改行で終了する行のイテレータを返す                                     |
+| `func SplitSeq(s, sep string) iter.Seq[string]`                    | セパレータで分割された部分文字列に対するイテレータを返す               |
+| `func SplitAfterSeq(s, sep string) iter.Seq[string]`               | セパレータの各インスタンスの後で分割された部分文字列のイテレータを返す |
+| `func FieldsSeq(s string) iter.Seq[string]`                        | 空白文字で分割された部分文字列に対するイテレータを返す                 |
+| `func FieldsFuncSeq(s string, f func(rune) bool) iter.Seq[string]` | 関数で分割された部分文字列に対するイテレータを返す                     |
+
+#### bytes パッケージ
+
+| 関数                                                               | 概要                                                                     |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `func Lines(s []byte) iter.Seq[[]byte]`                            | 改行で終了する行のイテレータを返す                                       |
+| `func SplitSeq(s, sep []byte) iter.Seq[[]byte]`                    | セパレータで分割されたサブスライスに対するイテレータを返す               |
+| `func SplitAfterSeq(s, sep []byte) iter.Seq[[]byte]`               | セパレータの各インスタンスの後で分割されたサブスライスのイテレータを返す |
+| `func FieldsSeq(s []byte) iter.Seq[[]byte]`                        | 空白文字で分割されたサブスライスに対するイテレータを返す                 |
+| `func FieldsFuncSeq(s []byte, f func(rune) bool) iter.Seq[[]byte]` | 関数で分割されたサブスライスに対するイテレータを返す                     |
+
 ## イテレータの実装
 
 次の例では `E` 型の要素の集合を表す型 `Set` を定義しています。  
