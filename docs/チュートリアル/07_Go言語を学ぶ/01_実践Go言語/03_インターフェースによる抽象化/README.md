@@ -7,72 +7,68 @@ Go 言語のインターフェースを活用すると、具体的な実装に�
 
 ## インターフェースの基本
 
-Go 言語のインターフェースは、特定のメソッドの集合を定義する型です。
+Go 言語のインターフェースでは明示的な継承（extends）や実装宣言（implements）を必要としません。  
+インターフェースに定義されたメソッドを持っているのなら、その型はインターフェースを満たしているとみなされます。  
+これは、「もし何かがアヒルのように歩き、アヒルのように鳴くならば、それはアヒルである」という「ダックタイピング（Duck Typing）」の概念に基づくものです。
+
+次の例では、「面積を求めることができるもの」を「図形」として抽象化しています。  
+最初に、面積を求める `Area() float64` メソッドを持つ型を図形 `Shape` インターフェースとして定義しています。  
+そして、円を表す `Circle` 型と、四角形を表す `Rectangle` 型をそれぞれ定義しています。  
+2つの型はどちらも面積を求める `Area() float64` メソッドを実装しているため、図形 `Shape` インターフェースを満たします。  
+最後に登場する `PrintArea(s Shape)` 関数は図形 `Shape` インターフェースを受け取る関数ですが、  
+円を表す `Circle` 型も、四角形を表す `Rectangle` 型も、図形 `Shape` インターフェースを満たしているため、  
+`PrintArea(s Shape)` 関数の引数として渡すことができます。
 
 ```go
 package main
 
 import "fmt"
 
-// 何かしらの方法で、指定した内容の通知を行うインターフェース
-//  Notify(string) メソッドを持つ任意の型を表す
-type Notifier interface {
-    Notify(string)
+// 図形インターフェース
+// ここでは「面積を求めることができるもの」を「図形」として定義した。
+type Shape interface {
+    // 面積を求めるメソッド
+    Area() float64
 }
 
-// Email での通知を行う、Notifier インターフェースを満たす構造体
-type EmailNotifier struct{}
-
-func (e EmailNotifier) Notify(message string) {
-    fmt.Println("Sending email:", message)
+// 円を表す構造体
+type Circle struct {
+    Radius float64
 }
 
-// SMS での通知を行う、Notifier インターフェースを満たす構造体
-type SMSNotifier struct{}
-
-func (s SMSNotifier) Notify(message string) {
-    fmt.Println("Sending SMS:", message)
+// 円の面積を求めるメソッド
+func (c Circle) Area() float64 {
+    return 3.14 * c.Radius * c.Radius
 }
 
-// Notifier インターフェースを満たす型を使って、実際に通知を行う関数
-func SendNotification(n Notifier, message string) {
-    n.Notify(message)
+// 四角形を表す構造体
+type Rectangle struct {
+    Width, Height float64
+}
+
+// 四角形の面積を求めるメソッド
+func (r Rectangle) Area() float64 {
+    return r.Width * r.Height
+}
+
+// あらゆる図形を受け取り、面積を表示する関数
+func PrintArea(s Shape) {
+    fmt.Println("Area:", s.Area())
 }
 
 func main() {
-    // Email での通知を実行
-    email := EmailNotifier{}
-    SendNotification(email, "You have a new message!")
+    c := Circle{Radius: 5}
+    r := Rectangle{Width: 4, Height: 6}
 
-    // SMS での通知を実行
-    sms := SMSNotifier{}
-    SendNotification(sms, "Your verification code is 123456")
-}
-```
-
-この例では、Email で通知を行う `EmailNotifier` と SMS で通知を行う `SMSNotifier` はどちらも `Notify(string)` メソッドを実装しているため、`Notifier` インターフェースを満たしています。  
-`SendNotification` 関数の引数は `Notifier` インターフェースであるので、`Notifier` インターフェースを満たす `EmailNotifier` と `SMSNotifier` を受け取ることができます。  
-このとき `SendNotification` 関数の実装では、具体的な通知方法を知る必要がありません。  
-もし新しい通知方法を追加する場合でも、`SendNotification` 関数の変更は不要です。
-
-### インターフェースを使用しない場合
-
-インターフェースを使用しない場合、具体的な型ごとに関数を用意する必要があり、コードの柔軟性が失われます。
-
-```go
-func SendEmailNotification(e EmailNotifier, message string) {
-    e.Notify(message)
-}
-
-func SendSMSNotification(s SMSNotifier, message string) {
-    s.Notify(message)
+    PrintArea(c) // Circle の面積を表示
+    PrintArea(r) // Rectangle の面積を表示
 }
 ```
 
 ### インターフェースの命名
 
 インターフェースの名前はその役割をよく表すものにしましょう。  
-Go 言語では「～する人」というニュアンス（名詞化）で 動詞+`er` や 動詞+`or` がよく使われます。  
+Go 言語では名詞の他に、「～する人」というニュアンス（名詞化）で 動詞+`er` や 動詞+`or` がよく使われます。  
 他の言語では「～できる人」というニュアンス（形容詞化）で 動詞+`able` なども使われますが、Go 言語では 動詞+`er` が一般的です。  
 また、他の言語ではインターフェースの接頭辞に `I` をつけるものもありますが、Go では推奨されていません。
 
