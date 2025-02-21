@@ -38,7 +38,7 @@ type (
 func All[V any]() iter.Seq[V]
 
 // for range で次のように各要素を巡回できる。
-for _, v := range All[int]() {
+for v := range All[int]() {
     // v に対する処理
 }
 ```
