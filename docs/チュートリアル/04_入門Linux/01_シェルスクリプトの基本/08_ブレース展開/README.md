@@ -1,4 +1,4 @@
-[戻る](../README.md)
+[戻る](../README.md) | [NotebookLM を開く](https://notebooklm.google.com/notebook/e315c1c1-2f3c-4d5e-bcab-34cb69a97938)
 
 # ブレース展開
 

@@ -12,3 +12,6 @@
 - [ブレース展開](08_ブレース展開/README.md)
 - [繰り返し](09_繰り返し/README.md)
 - [シェルオプション](10_シェルオプション/README.md)
+
+---
+ [NotebookLM を開く](https://notebooklm.google.com/notebook/e315c1c1-2f3c-4d5e-bcab-34cb69a97938)

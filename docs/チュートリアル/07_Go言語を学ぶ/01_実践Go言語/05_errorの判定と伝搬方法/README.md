@@ -1,4 +1,4 @@
-[戻る](../README.md)
+[戻る](../README.md) | [NotebookLM を開く](https://notebooklm.google.com/notebook/72ccb774-4924-45b5-9241-c5b183370e0e)
 
 # `error` の判定と伝搬方法
 

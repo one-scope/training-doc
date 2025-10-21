@@ -12,3 +12,6 @@
 - [関数にメソッドを追加する](08_関数にメソッドを追加する/README.md)
 - [ジェネリクスと型制約](09_ジェネリクスと型制約/README.md)
 - [イテレータの利用と実装](10_イテレータの利用と実装/README.md)
+
+---
+[NotebookLM を開く](https://notebooklm.google.com/notebook/72ccb774-4924-45b5-9241-c5b183370e0e)

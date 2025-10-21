@@ -1,4 +1,4 @@
-[戻る](../README.md)
+[戻る](../README.md) | [NotebookLM を開く](https://notebooklm.google.com/notebook/72ccb774-4924-45b5-9241-c5b183370e0e)
 
 # 関数を受け取る関数、関数を返す関数（高階関数）
 
